@@ -1,0 +1,806 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body {
+    line-height: 1.6;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+header {
+    background-color: transparent;
+    color: #000;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    z-index: 2;
+}
+
+header img {
+    max-width: 200px;
+    height: auto;
+}
+
+header p {
+    padding: 0px;
+}
+
+nav {
+    display: inline;
+    background-color: transparent;
+    text-align: center;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #50AC6B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #2A7B43;
+}
+
+nav ul li:not(:last-child)::after {
+    content: "|";
+    color: #50AC6B;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    right: -20px;
+}
+
+.banner, .banner2, .banner3 {
+    background-size: cover;
+    background-image: url('imagens/foods.jpg');
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.3);
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex; /* Adiciona flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.banner3::before, .banner2::before, .banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 60%;
+    z-index: 1;
+}
+
+.banner-content, .banner3-content, .banner2-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 800px;
+    padding: 50px;
+    text-align: center; /* Centraliza o texto dentro do conteúdo */
+}
+
+.banner-content h1, .banner3-content h1, .banner2-content h1 {
+    font-size: 1.8em;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.banner-content p {
+    margin-bottom: 20px;
+}
+
+.banner-content a {
+    display: inline-block;
+}
+
+.banner-content button {
+    background-color: #50AC6B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.banner-content button:hover {
+    background-color: #2A7B43;
+}
+
+.boxformulario {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.formulario {
+    background: #50AC6B;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.2);
+    color: #fff;
+    max-width: 800px;
+    width: 100%;    
+}
+
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formulario h2 {
+    text-align: center;
+    padding:20px;
+    font-size: 2rem; /* Ajustado para 1rem */
+    line-height: 2rem;
+}
+.formulario p {
+    text-align: center;
+    padding:10px;
+    font-size: 1.5rem; /* Ajustado para 1rem */
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    gap: 5px;
+}
+
+.form-group {
+    display: flex;
+    column-gap: 5px;
+    text-transform: uppercase;
+}
+
+.form-group > div {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #000;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    resize: none;
+    gap: 5px;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.radio-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 1rem;
+}
+
+.radio-horizontal label {
+    display: flex;
+    align-items: center;
+}
+
+.frequencia {
+    accent-color: #50AC6B;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #50AC6B;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    color: #fff;
+}
+
+.boxreceitas {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.receita1, .receita2, .receita3 {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    border: 2px solid #50AC6B;
+    border-radius: 30px;
+    max-width: 800px;
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+}
+
+.imagemreceita1, .imagemreceita2, .imagemreceita3 {
+    flex: 1;
+    width: 100%;
+    height: 200px;
+}
+
+.imagemreceita1 img, .imagemreceita2 img, .imagemreceita3 img {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.inforeceita1, .inforeceita2, .inforeceita3 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: justify;
+}
+
+
+.boxreceitas h2 {
+    font-size: 25px;
+    color: #50AC6B;
+    text-transform: uppercase;
+}
+
+.boxreceitas p {
+    font-size: 16px;
+    color: #666;
+}
+
+.login-container {
+    min-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 50px;
+    flex-direction: column;
+
+}
+.login-container h1 {
+    text-align: center;
+
+}
+
+.login-container form {
+    max-width: 400px;
+}
+
+/* Estilo para o conteúdo do dashboard */
+/* Estilo para o conteúdo do dashboard */
+.dashboard {
+    max-width: 800px; /* Largura máxima do conteúdo do dashboard */
+    margin: 20px auto; /* Centraliza o conteúdo na página */
+    background-color: #ffffff; /* Cor de fundo do conteúdo */
+    padding: 20px;
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.dashboard h1 {
+    font-size: 28px; /* Tamanho do título principal */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    color: #3d9b58; /* Cor do título */
+}
+
+.dashboard h2 {
+    font-size: 24px; /* Tamanho do título secundário */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    color: #3d9b58; /* Cor do título */
+}
+
+/* Estilo para a tabela de dados */
+.dashboard table {
+    width: 100%; /* Largura total da tabela */
+    border-collapse: collapse; /* Remove espaço entre as células */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.dashboard th,
+.dashboard td {
+    border: 1px solid #ddd; /* Borda das células */
+    padding: 12px; /* Espaçamento interno das células */
+    text-align: left; /* Alinhamento do texto */
+}
+
+.dashboard th {
+    background-color: #f2f2f2; /* Cor de fundo para o cabeçalho da tabela */
+    color: #333; /* Cor do texto para o cabeçalho da tabela */
+    font-weight: bold; /* Texto em negrito para o cabeçalho da tabela */
+}
+
+.dashboard tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+}
+
+.dashboard tbody tr:hover {
+    background-color: #e5f3ff; /* Cor de fundo ao passar o mouse sobre as linhas */
+}
+
+/* Estilo para a paginação */
+.pagination {
+    margin-top: 20px; /* Espaçamento superior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination a,
+.pagination .current-page {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 4px;
+    background-color: #3d9b58; /* Cor de fundo dos links */
+    color: #ffffff; /* Cor do texto dos links */
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.pagination .current-page {
+    background-color: #67c285; /* Cor de fundo para a página atual */
+}
+
+.pagination a:hover {
+    background-color: #67c285; /* Cor de fundo ao passar o mouse sobre os links */
+}
+
+
+footer {
+    display: flex;
+    background-color: #50AC6B;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+}
+
+.boxsobrenos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+.boxsn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    padding: 20px;
+    color: #2A7B43;
+    text-align: center;
+    margin: 20px;
+}
+
+.imagemboxsn {
+    flex: 1;
+    width: 100%;
+    height: 300px;
+}
+
+.imagemboxsn img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.infoboxsn {
+    flex: 2;
+}
+
+.infoboxsn h2 {
+    font-size: 24px;
+    color: #50AC6B;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.infoboxsn p {
+    line-height: 1;
+    font-size: 16px;
+    color: #000;
+    text-align: left;
+}
+
+.eatbetter {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todasreceitas {
+    background-color: #fff;
+    max-width: 600px;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.todasreceitas h1 {
+    font-size: 25px;
+    color: #50AC6B;
+    padding: 20px;
+}
+
+.todasreceitas h2 {
+    font-size: 20px;
+    color: #50AC6B;
+    padding: 20px;
+}
+
+.todasreceitas p {
+    font-size: 16px;
+    color: #000;
+
+}
+
+.todasreceitas img {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.sobrenos {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.sobrenos h1 {
+    font-size: 25px;
+    color: #50AC6B;
+    text-align: center;
+}
+
+.sobrenos p {
+    font-size: 16px;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+/* Estilo do Menu */
+nav {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+    min-width: 350px;
+}
+
+.imagemboxsn img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+    /* Estilo do Header */
+
+header {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+    min-width: 350px;
+}
+
+/* Estilo do Banner */
+
+.banner, .banner2, .banner3 {
+    display: flex;
+    justify-content: center;
+    background-image: url('imagens/foods.jpg');
+    align-items: center;
+    flex: 1;
+    background-color: #50AC6B;
+    overflow: hidden;
+    margin-top: 1rem;
+    margin-bottom: 0px;
+    min-width: 350px;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+
+
+/* Estilo do Formulario */
+    .boxformulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        background-color: #50AC6B;
+        overflow: hidden;
+        min-width: 350px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .formulario {
+        padding: 0%;
+        overflow: hidden;
+        box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0);
+    }
+
+    .formulario h2 {
+        padding: 1rem;
+        font-size: 1.5rem; /* Ajustado para 1rem */
+        line-height: 1.5rem;
+    }
+
+    .formulario form {
+        gap: 5px;
+    }
+
+    .formulario p {
+        font-size: 0.9rem; /* Ajustado para 1rem */
+        padding: 1rem;
+        line-height: 1rem;
+    }
+
+    .form-group {
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 0px;
+    }
+
+    .form-group > div {
+        flex: 1;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 0.7rem; /* Ajustado para 1rem */
+        min-height: 40px;
+    }
+
+    .radio-horizontal {
+        flex-direction: row;
+        gap: 5px; /* Espaçamento entre os radios */
+        font-size: 0.9rem; /* Ajustado para 1rem */
+    }
+
+    .radio-horizontal label {
+        width: 100%; /* Faz os labels ocuparem toda a largura disponível */
+        justify-content: center; /* Centraliza o conteúdo dos labels */
+    }
+
+    .frequencia {
+        /* Estilos para .frequencia dentro da media query */
+        accent-color: #50AC6B;
+    }
+
+    input[type="submit"] {
+        margin-top: 20px;
+    }    
+    
+    .boxsobrenos,
+    .sobrenos,
+    .boxsn  {
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sobrenos h1 {
+        font-size: 25px;
+        color: #50AC6B;
+        text-align: center;
+    }
+    
+    .sobrenos p {
+        font-size: 16px;
+        color: #000;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    /* Estilo das Receitas */
+
+    .boxreceitas {
+        min-width: 350px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        background-color: #fff;
+        overflow: hidden;
+    
+    }
+    .todasreceitas h1 {
+        font-size: 2rem;
+        color: #50AC6B;
+        padding: 10px;
+    }
+    
+    .todasreceitas h2 {
+        font-size: 1.5rem;
+        color: #50AC6B;
+        padding: 10px;
+    }
+    
+    .todasreceitas p {
+        font-size: 16px;
+        color: #000;
+        padding: 10px;
+    }
+
+    
+
+    .receita1, .receita2, .receita3 {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .imagemreceita1 img, .imagemreceita2 img, .imagemreceita3 img {
+        width: 100%;
+        height: 150px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .imagemreceita1, .imagemreceita2, .imagemreceita3 {
+        width: 100%;
+        height: 150px;
+        flex: 1;
+    }
+
+    .inforeceita1, .inforeceita2, .inforeceita3 {
+        padding: 0;
+
+    }
+
+    .boxreceitas h2 {
+        font-size: 1.5rem; /* Ajustado para 1.5rem */
+        text-align: center;
+    }
+
+    .boxreceitas p {
+        font-size: 1rem; /* Ajustado para 1rem */
+
+    }
+
+    .infoboxsn {
+        font-size: 1rem; /* Ajustado para 1rem */
+        padding: 10px;
+    }
+    .infoboxsn  h2 {
+        font-size: 1.5rem; /* Ajustado para 1rem */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+    }
+
+    .todasreceitas {
+        min-width: 350px;
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        background-color: #fff;
+        overflow: hidden;
+
+    }
+
+    .todasreceitas img {
+        width: 350px;
+        object-fit: cover;
+    }
+
+    .login-container {
+        min-width: 350px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+        padding: 50px;
+        background-color: #fff;
+        overflow: hidden;
+    
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #50AC6B;
+        flex: 1;
+        overflow: hidden;
+        min-width: 350px;
+        font-size: 0.8rem; /* Ajustado para 0.8rem */
+    }
+}
